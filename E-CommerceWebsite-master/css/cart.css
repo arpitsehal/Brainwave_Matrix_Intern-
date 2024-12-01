@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+#cartMainContainer {
+    padding: 80px 40px;
+}
+
+#cartContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+img {
+    width: 90px;
+    float: left;
+    border-radius: 8px;
+    margin-right: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#boxContainer {
+    display: grid;
+    grid-gap: 15px;
+    padding: 25px;
+    width: 100%;
+}
+
+#box {
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+#totalContainer {
+    width: 60%;
+    padding: 25px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#totalContainer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #34495e;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2c3e50;
+}
+
+button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+button a:focus {
+    outline: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 800px) {
+    img {
+        width: 70px;
+        margin-right: 20px;
+    }
+
+    h3, h4 {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #cartMainContainer {
+        padding: 70px 20px;
+    }
+
+    #totalContainer {
+        width: 80%;
+    }
+}
+
+@media(max-width: 555px) {
+    #cartContainer {
+        grid-template-columns: 1fr;
+    }
+
+    #boxContainer {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #totalContainer {
+        width: 90%;
+    }
+}
